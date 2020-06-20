@@ -22,3 +22,49 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+README.md/	
+
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|username|string|null: false|
+|email|string|null: false|
+|password|string|null: false|
+|profile|text|null: false|
+|profile_image|string|
+
+### Association
+- has_many :posts
+- has_many :tag-users
+- has_many  :tags,  through:  :tag-users
+
+
+## postsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|title|string|
+|body|text|null: false|
+|image|string|
+|user_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :user
+
+
+## tag-usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|tag_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :tag
+- belongs_to :user
+
+
+## tagsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|tag_name|string|null: false, foreign_key: true|
+### Association
+- has_many :tag-users
+- has_many  :users,  through:  :tag-users
