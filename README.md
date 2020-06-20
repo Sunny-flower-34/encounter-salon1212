@@ -23,6 +23,8 @@ Things you may want to cover:
 
 * ...
 
+README.md/	
+
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -31,6 +33,7 @@ Things you may want to cover:
 |password|string|null: false|
 |profile|text|null: false|
 |profile_image|string|
+
 ### Association
 - has_many :posts
 - has_many :tag-users
