@@ -22,6 +22,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
 README.md/	
 
 ## usersテーブル
@@ -31,7 +32,8 @@ README.md/
 |email|string|null: false|
 |password|string|null: false|
 |profile|text|null: false|
-|profile_image|string|null: false|
+|profile_image|string|
+
 ### Association
 - has_many :posts
 - has_many :tag-users
@@ -40,7 +42,7 @@ README.md/
 
 ## postsテーブル
 |Column|Type|Options|
-|———|——|———|
+|------|----|-------|
 |title|string|
 |body|text|null: false|
 |image|string|
