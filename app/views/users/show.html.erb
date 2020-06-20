@@ -1,6 +1,7 @@
 <h1>Users#show</h1>
 <p>Find me in app/views/users/show.html.erb</p>
 <div>
+
   <%= attachment_image_tag @user, :profile_image, fallback: "no-image.png" %>
   <%= @user.username %>
   <%= @user.profile %>
