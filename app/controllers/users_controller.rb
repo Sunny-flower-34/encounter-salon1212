@@ -2,7 +2,11 @@ class UsersController < ApplicationController
   before_action :authenticate_user!, except: [:index]
 
   def index
-    @users = User.all
+    if params[:tag_name]
+      @users = User.tagged_with("#{params[:tag_name]}")
+    else
+      @users = User.all
+    end
   end
 
   def show
@@ -27,9 +31,9 @@ class UsersController < ApplicationController
   end
   
   def destroy
-    @post = Post.find(params[:id])
-    @post.destroy
-    redirect_to posts_path(@post)
+    @user = User.find(params[:id])
+    @user.destroy
+    redirect_to users_path(@user)
   end
   
   private
