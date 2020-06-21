@@ -22,9 +22,10 @@
 
     <% if user_signed_in? %>
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout" %>
-      <%= link_to "投稿一覧", posts_path, class: "logout" %>
       <%= link_to "新規投稿", new_post_path, class: "logout" %>
+      <%= link_to "投稿一覧", posts_path, class: "logout" %>
       <%= link_to "ユーザー一覧", users_path, class: "list" %>
+      <%= link_to "タグ一覧", tags_path, class: "list" %>
       <%= link_to "マイページ", user_path(current_user), class: "logout" %>
       
     <% else %>
