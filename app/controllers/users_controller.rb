@@ -25,7 +25,13 @@ class UsersController < ApplicationController
       render :edit
     end
   end
-
+  
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    redirect_to posts_path(@post)
+  end
+  
   private
   
   def user_params
