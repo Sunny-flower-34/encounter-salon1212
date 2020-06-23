@@ -5,6 +5,6 @@ class TagsController < ApplicationController
 
   def show
     @tag = ActsAsTaggableOn::Tag.find(params[:id])
-    @products = Product.tagged_with(@tag.name)
+    # @products = Product.tagged_with(@tag.name)
   end
 end
