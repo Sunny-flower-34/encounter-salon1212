@@ -17,11 +17,12 @@
  @import "modules/posts";
  @import "modules/devise";
 //  @import "modules/user";
-//  @import "modules/home";
+ @import "modules/home";
 //  @import "modules/flash";
 
 *{
   text-decoration: none;
+  margin: 0px;
 }
 
 .header{
@@ -31,7 +32,7 @@
   justify-content: space-around;
   align-items: center;
   height: 100px;
-  position: fixed;
+  // position: fixed;
   width: 100%;
 }
 

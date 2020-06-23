@@ -1,26 +1,45 @@
-<h2 class="login">ログイン画面</h2>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<section class="section">
+   <h1 class="title">LOG IN</h1>
+
+
+  <div class="form row">
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+          <div class="form__field col x-50">
+            <%= f.label :email, class: "label" %>
+            <p class="form__input input-text js-input">
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form__input__field input-text js-input" %>
+            </p>
+          </div>
+
+          <div class="form__field col x-50">
+            <%= f.label :PassWord, class: "label" %>
+            <p class="form__input input-text js-input">
+              <%= f.password_field :password, autocomplete: "current-password", class: "form__input__field input-text js-input" %>
+            </p>
+          </div>
+
+          <div class="actions form__field col x-100 align-center">
+            <div>
+              <%= f.submit "LOG IN", class: "submit-btn" %>
+              <% end %>
+            </div>
+            <p class="note">Based on<%= render "devise/shared/links" %></p>
+            <div>
+              
+            </div>
+          </div>
+  
   </div>
+</section>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+<script>
+$( '.js-input' ).keyup(function() {
+  if( $(this).val() ) {
+     $(this).addClass('not-empty');
+  } else {
+     $(this).removeClass('not-empty');
+  }
+});
+</script>
