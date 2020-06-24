@@ -14,50 +14,56 @@
  *= require_self
  */
 //  @import "reset";
- @import "modules/posts";
- @import "modules/devise";
-//  @import "modules/user";
- @import "modules/home";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "modules/posts";
+@import "modules/devise";
+@import "modules/users";
+@import "modules/tags";
+@import "modules/home";
 //  @import "modules/flash";
 
-*{
+* {
   text-decoration: none;
   margin: 0px;
 }
 
-.header{
+.header {
   background-image: url("img_4453.jpeg");
   background-size: cover;
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 100px;
-  // position: fixed;
+  position: fixed;
+  top: 0px;
   width: 100%;
 }
 
-.title{	
-  font-family: 'Snell Roundhand','Trattatello','Helvetica Neue','Helvetica','Arial','ＭＳ ゴシック','Andale Mono','Athelas','Avenir','Baskerville','HoeflerText-Regular','Hoefler Text',sans-serif;
+.title {
+  font-family: "Snell Roundhand", "Trattatello", "Helvetica Neue", "Helvetica",
+    "Arial", "ＭＳ ゴシック", "Andale Mono", "Athelas", "Avenir", "Baskerville",
+    "HoeflerText-Regular", "Hoefler Text", sans-serif;
   font-size: 60px;
   color: rgb(51, 50, 50);
 }
 
-.input{
+.input {
   width: 600px;
   height: 50px;
 }
-.menu{
+.menu {
   display: flex;
   // justify-content: space-between;
-  li{
+  li {
     margin-left: 20px;
   }
-  &__list{
+  &__list {
     margin-left: 22px;
     font-size: 12px;
     color: rgb(51, 50, 50);
-    &__eng{
-      font-family: 'Kaiti TC',sans-serif;
+    &__eng {
+      font-family: "Kaiti TC", sans-serif;
       font-size: 19px;
     }
   }

@@ -1,0 +1,94 @@
+.imgsize {
+  width: 400px;
+  height: 100%;
+}
+
+.icon {
+  font-size: 30px;
+}
+
+// ユーザー詳細ページ
+.profile {
+  margin-top: 40px;
+  padding: 40px;
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid #808080;
+  background-color: rgb(216, 213, 213);
+  &__image {
+  }
+  &__list {
+    width: 60%;
+    .data {
+      display: flex;
+      justify-content: space-around;
+      // background-color: rgb(188, 189, 185);
+      border-bottom: 1px solid #808080;
+      &__name {
+        font-size: 30px;
+      }
+      &__icon {
+        font-size: 30px;
+      }
+    }
+    .m-l5 {
+      margin-left: 5px;
+    }
+
+    .data {
+      border-bottom: 1px solid #808080;
+      // background-color: rgb(171, 172, 171);
+    }
+    .data2 {
+      margin-top: 20px;
+      height: 80%;
+      &__prof {
+        height: 60%;
+      }
+      &__tags {
+        height: 20%;
+      }
+      &__links {
+        height: 20%;
+      }
+    }
+  }
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  // background-color: rgb(180, 180, 180);
+  .card {
+    border: 1px solid #808080;
+    flex: auto;
+    width: 30%;
+    margin: 10px;
+    // background-color: rgb(180, 180, 180);
+    &__image {
+      background-color: rgb(214, 214, 214);
+    }
+  }
+}
+
+// ユーザー一覧ページ
+
+.users {
+  border: 1px solid #808080;
+  width: 30%;
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  &__link {
+    margin: 0 auto;
+    .username {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 25px;
+    }
+  }
+  &__post-num {
+  }
+  &__tags {
+    height: 30%;
+  }
+}
