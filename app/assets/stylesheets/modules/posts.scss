@@ -1,0 +1,40 @@
+// .cards {
+//   display: flex;
+//   flex-wrap: wrap;
+//   // background-color: rgb(180, 180, 180);
+//   .card {
+//     border: 1px solid #808080;
+//     flex: auto;
+//     width: 30%;
+//     margin: 10px;
+//     // background-color: rgb(180, 180, 180);
+//     &__image {
+//       background-color: rgb(214, 214, 214);
+//     }
+//     &__time {
+//     }
+//   }
+// }
+
+.icon {
+  font-size: 30px;
+}
+.Contributor {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid rgb(211, 211, 211);
+  background: rgb(197, 196, 196);
+  &__imag {
+    .userimage {
+      width: 100px;
+      height: 100%;
+    }
+  }
+  &__name {
+    font-size: 35px;
+  }
+}
+.post {
+  display: flex;
+}
