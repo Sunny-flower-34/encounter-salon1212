@@ -60,37 +60,43 @@
     </div>
   </main>
 
-  投稿一覧
+</div>
+<div class="Separating-line"> </div>
+
+<div class="section">
+
   <article class="align-center">
-    <div class="cards">
+    <div class="post-cards">
       <% @user.posts.each do |post| %>
-      <div class="card">
-        <div class="card__image">
-          <%= link_to post_path(post) do %>
+      <div class="post-card">
+        <%= link_to post_path(post) do %>
+        <div class="post-card__image">
           <%= attachment_image_tag post, :image, class:"imgsize" %>
-          <% end %>
         </div>
+        <% end %>
 
         <% if @user.id == current_user.id %>
-        <div class="card__edit">
+
+        <div class="post-card__edit">
           <%= link_to edit_post_path(post) do %>
           投稿編集<i class="fa fa-cog icon"></i>
           <% end %>
         </div>
 
-        <div class="card__delete">
+        <div class="post-card__delete">
           <%= link_to post_path(post), method: :delete, data: {confirm: "消していいの？"} do %>
           投稿削除<i class="fas fa-trash-alt icon"></i>
           <% end %>
-          <% end %>
         </div>
 
-        <div class="card__time">
+        <% end %>
+
+        <div class="post-card__time">
           <%= post.updated_at.strftime("%Y-%m-%d %H:%M") %> 更新
         </div>
+
       </div>
       <% end %>
     </div>
-
   </article>
 </div>
