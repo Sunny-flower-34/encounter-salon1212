@@ -28,6 +28,9 @@
           <%= attachment_image_tag post, :image, class:"imgsize" %>
         </div>
 
+        <div class="card__title">
+          <%= post.title %>
+        </div>
         <div class="card__body">
           <%= simple_format post.body %>
         </div>
