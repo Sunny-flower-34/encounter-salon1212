@@ -88,19 +88,18 @@ body {
         outline: none;
       }
 
-      &:focus,
-      .not-empty {
-        .label {
-          transform: translateY(-24px);
-        }
-      }
+      // &:focus,
+      // .not-empty {
+      //   .label {
+      //   transform: translateY(-24px);
+      // }
+      // }
     }
   }
   .label {
-    position: absolute;
-    left: 20px;
-    bottom: 11px;
-
+    // position: absolute;
+    // left: 20px;
+    // bottom: 11px;
     font-family: Lusitana, serif;
     font-size: 18px;
     line-height: 26px;
@@ -108,6 +107,9 @@ body {
     color: #888;
     cursor: text;
     transition: transform 0.2s ease-in-out;
+    // &:focus {
+    //   transform: translateY(-50px);
+    // }
   }
 
   .submit-btn {
@@ -124,6 +126,7 @@ body {
     cursor: pointer;
     margin-bottom: 40px;
     transition: transform 0.5s ease-in-out;
+
     &:hover {
       background-color: #fff;
       color: rgb(56, 56, 56);
