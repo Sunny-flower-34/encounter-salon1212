@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   root to: "home#index"
   devise_for :users
   resources :users
-  resources :posts
+  resources :posts do
+    resources :comments, only: :create
+  end
   resources :tags, only: %i[index show]
 
 end
