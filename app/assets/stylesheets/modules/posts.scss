@@ -20,9 +20,9 @@
 //   margin: 010px auto;
 // }
 
-.icon {
-  font-size: 30px;
-}
+// .icon {
+//   font-size: 30px;
+// }
 
 .cards {
   width: 80%;
@@ -99,5 +99,13 @@
   // margin: 0 auto;
   // text-align: center;
   .Post-form {}
+}
 
+// 投稿詳細ページ
+
+.comments {
+  height: 100px;
+  // margin: 100px;
+  border: 1px solid #6d6d6d;
+  overflow: scroll;
 }

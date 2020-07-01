@@ -5,10 +5,11 @@
   margin: auto;
 }
 
-.icon {
-  font-size: 30px;
-  color: rgb(32, 32, 32);
-}
+// .icon {
+//   font-size: 30px;
+//   // color: rgb(32, 32, 32);
+//   color: #daa25a;
+// }
 
 // ユーザー詳細ページ
 .profile {
@@ -17,7 +18,8 @@
   display: flex;
   justify-content: space-around;
   border: 1px solid #808080;
-  background-color: #333E48;
+  background-color: #333e48;
+  opacity: 0.9;
   // background-color: rgb(216, 213, 213);
 
   flex-wrap: wrap;
@@ -32,7 +34,7 @@
     width: 60%;
 
     .data {
-      color: #DAA25A;
+      color: #daa25a;
       display: flex;
       justify-content: space-around;
       // background-color: rgb(188, 189, 185);
@@ -41,13 +43,24 @@
 
       &__name {
         font-family: Georgia, "Times New Roman", Times, serif;
-        color: #DAA25A;
+        color: #daa25a;
         font-size: 30px;
       }
 
+      &__edit {
+        .fa-cog {
+          color: #9fa0a1;
+        }
+      }
+      &__delete {
+        .fa-trash-alt {
+          color: #9fa0a1;
+        }
+      }
       .icon {
-        color: #DAA25A;
-        font-size: 30px;
+        .fa-envelope {
+          color: #9fa0a1;
+        }
       }
     }
 
@@ -61,12 +74,12 @@
     }
 
     .data2 {
-      color: #DAA25A;
+      color: #daa25a;
       margin-top: 20px;
       height: 80%;
 
       &__prof {
-        color: #DAA25A;
+        color: #daa25a;
         height: 60%;
       }
 
@@ -75,7 +88,27 @@
       }
 
       &__links {
-        height: 20%;
+        .icon {
+          height: 20%;
+          .fa-facebook-square {
+            color: #9fa0a1;
+            &:hover {
+              color: #3b5998;
+            }
+          }
+          .fa-twitter {
+            color: #9fa0a1;
+            &:hover {
+              color: #1da1f2;
+            }
+          }
+          .fa-github {
+            color: #9fa0a1;
+            &:hover {
+              color: #e9edf0;
+            }
+          }
+        }
       }
     }
   }
@@ -146,6 +179,7 @@
     margin: 10px auto;
     overflow: scroll;
 
-    .tag {}
+    .tag {
+    }
   }
 }
