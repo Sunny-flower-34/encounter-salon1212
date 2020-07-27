@@ -8,6 +8,7 @@ $(function() {
     });
 });
 $(function() {
+  console.log("se");
   $(".js-input").keyup(function() {
     if ($(this).val()) {
       $(this).addClass("not-empty");
