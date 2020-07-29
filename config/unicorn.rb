@@ -39,6 +39,8 @@
 #   defined?(ActiveRecord::Base) && ActiveRecord::Base.establish_connection
 # end
 
+# Unicorn関係で起きたエラーをlog/unicorn.stderr.log」に記録するという指定
+
 #サーバ上でのアプリケーションコードが設置されているディレクトリを変数に入れておく
 app_path = File.expand_path('../../', __FILE__)
 
